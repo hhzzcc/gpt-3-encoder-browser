@@ -1,15 +1,13 @@
 # GPT-3-Encoder-Browser
-基于gpt-3-encoder包改造成浏览器端可以使用的
+基于gpt-3-encoder，改造成浏览器端可以使用的包
 
-## Install with npm
+## 安装
 
 ```
 npm install gpt-3-encoder-browser
 ```
 
-## Usage
-
-Compatible with Node >= 12
+## 使用
 
 ```js
 import {encode, decode} from 'gpt-3-encoder-browser'
