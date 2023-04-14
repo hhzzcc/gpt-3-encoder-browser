@@ -1,0 +1,26 @@
+{
+  "name": "gpt-3-encoder-browser",
+  "version": "0.0.1",
+  "description": "Javascript BPE Encoder Decoder for GPT-2 / GPT-3",
+  "main": "./core/index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "encoder.js",
+    "coder.js",
+    "vocab.js",
+    "index.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hhzzcc/gpt-3-encoder-browser.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hhzzcc/gpt-3-encoder-browser/issues"
+  },
+  "homepage": "https://github.com/hhzzcc/gpt-3-encoder-browser#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
