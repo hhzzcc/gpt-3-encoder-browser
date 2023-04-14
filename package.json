@@ -4,6 +4,11 @@
   "description": "Javascript BPE Encoder Decoder for GPT-2 / GPT-3",
   "main": "./core/index.js",
   "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "default": "./core/index.ts"
+    }
+  },
   "files": [
     "encoder.js",
     "coder.js",
