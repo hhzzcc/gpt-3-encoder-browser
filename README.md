@@ -1,5 +1,5 @@
 # GPT-3-Encoder-Browser
-基于gpt-3-encoder，改造成浏览器端可以使用的包
+基于gpt-3-encoder改造，在浏览器端就可以将用户提交给ChatGpt的字符串解析成对应token，方便计算发送的token数
 
 ## 安装
 
