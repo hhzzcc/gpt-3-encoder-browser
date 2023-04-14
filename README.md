@@ -25,5 +25,3 @@ const decoded = decode(encoded)
 console.log('We can decode it back into:\n', decoded)
 
 ```
-
-

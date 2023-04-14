@@ -6,7 +6,7 @@
   "types": "./index.d.ts",
   "exports": {
     ".": {
-      "default": "./core/index.ts"
+      "default": "./core/index.js"
     }
   },
   "files": [
