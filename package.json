@@ -1,6 +1,6 @@
 {
   "name": "gpt-3-encoder-browser",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Javascript BPE Encoder Decoder for GPT-2 / GPT-3",
   "main": "./core/index.js",
   "types": "./index.d.ts",

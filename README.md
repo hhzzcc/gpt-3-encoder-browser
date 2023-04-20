@@ -1,5 +1,6 @@
 # GPT-3-Encoder-Browser
-基于gpt-3-encoder改造，在浏览器端就可以将用户提交给ChatGpt的字符串解析成对应token，方便计算发送的token数
+
+🍎 基于gpt-3-encoder改造，在浏览器端就可以将用户提交给ChatGpt的字符串解析成token。
 
 ## 安装
 
@@ -7,18 +8,25 @@
 npm install gpt-3-encoder-browser
 ```
 
-## 使用
+## 字符转token
 
 ```js
-import { encode, decode } from 'gpt-3-encoder-browser'
-
-const encoded = encode('hello,你好，🌈 ')
+import { encode } from 'gpt-3-encoder-browser';
+const tokens = encode('hello,你好，🌈 ');
 // 13
-console.log(encode.length)
+console.log(tokens.length);
 
-// hello,你好，🌈 
-for(let token of encoded){
-  console.log({token, string: decode([token])})
+```
+
+## token转字符
+
+```js
+import { encode } from 'gpt-3-encoder-browser';
+let str = '';
+for (let token of tokens) {
+    str += decode([token]);
 }
+// hello,你好，🌈 
+console.log(str);
 
 ```
