@@ -10,18 +10,15 @@ npm install gpt-3-encoder-browser
 ## 使用
 
 ```js
-import {encode, decode} from 'gpt-3-encoder-browser'
+import { encode, decode } from 'gpt-3-encoder-browser'
 
-const str = 'This is an example sentence to try encoding out on!'
-const encoded = encode(str)
-console.log('Encoded this string looks like: ', encoded)
+const encoded = encode('hello,你好，🌈 ')
+// 13
+console.log(encode.length)
 
-console.log('We can look at each token and what it represents')
+// hello,你好，🌈 
 for(let token of encoded){
   console.log({token, string: decode([token])})
 }
-
-const decoded = decode(encoded)
-console.log('We can decode it back into:\n', decoded)
 
 ```
