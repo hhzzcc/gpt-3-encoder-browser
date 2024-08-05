@@ -1,32 +1,31 @@
 {
   "name": "gpt-3-encoder-browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript BPE Encoder Decoder for GPT-2 / GPT-3",
-  "main": "./core/index.js",
-  "types": "./index.d.ts",
-  "exports": {
-    ".": {
-      "default": "./core/index.js"
-    }
+  "homepage": "https://github.com/hhzzcc/gpt-3-encoder-browser#readme",
+  "bugs": {
+    "url": "https://github.com/hhzzcc/gpt-3-encoder-browser/issues"
   },
-  "files": [
-    "core/encoder.js",
-    "core/coder.js",
-    "core/vocab.js",
-    "core/index.d.ts",
-    "core/index.js"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hhzzcc/gpt-3-encoder-browser.git"
   },
-  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hhzzcc/gpt-3-encoder-browser/issues"
+  "author": "",
+  "scripts": {
+    "test": "vitest run"
   },
-  "homepage": "https://github.com/hhzzcc/gpt-3-encoder-browser#readme",
+  "exports": {
+    ".": {
+      "types": "./core/index.d.ts",
+      "default": "./core/index.js"
+    }
+  },
+  "main": "./core/index.js",
+  "types": "./core/index.d.ts",
+  "files": ["core/*"],
   "devDependencies": {
-    "jest": "^26.4.2"
+    "@vitest/coverage-v8": "^2.0.5",
+    "vitest": "^2.0.5"
   }
 }

@@ -98,7 +98,6 @@ function bpe(token) {
     if (cache.has(token)) {
         return cache.get(token);
     }
-    ``;
 
     let word = token.split("");
 
@@ -110,6 +109,7 @@ function bpe(token) {
 
     while (true) {
         const minPairs = {};
+
         Array.from(pairs).map((pair) => {
             const rank = bpe_ranks[pair];
             minPairs[isNaN(rank) ? 10e10 : rank] = pair;
@@ -170,8 +170,9 @@ function bpe(token) {
 }
 
 export function encode(text) {
-    let bpe_tokens = [];
+    const bpe_tokens = [];
     const matches = Array.from(text.matchAll(pat)).map((x) => x[0]);
+
     for (let token of matches) {
         token = encodeStr(token)
             .map((x) => {
@@ -182,8 +183,10 @@ export function encode(text) {
         const new_tokens = bpe(token)
             .split(" ")
             .map((x) => encoder[x]);
-        bpe_tokens = bpe_tokens.concat(new_tokens);
+
+        Array.prototype.push.apply(bpe_tokens, new_tokens);
     }
+
     return bpe_tokens;
 }
 
@@ -192,8 +195,3 @@ export function decode(tokens) {
     text = decodeStr(text.split("").map((x) => byte_decoder[x]));
     return text;
 }
-
-// module.exports = {
-//   encode,
-//   decode
-// };
